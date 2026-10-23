@@ -1,0 +1,33 @@
+{
+    "name": "笔趣阁TW手机版",
+    "url": "m.biquge.tw",
+    "version": 101,
+    "search": {
+        "url": "https://m.biquge.tw/search.php?keyword=${key}",
+        "charset": "utf-8",
+        "list": "div.result-card",
+        "name": "a.book-title",
+        "author": "span.author",
+        "cover": "img@attr->src",
+        "summary": "div.book-intro",
+        "detail": "a.book-title"
+    },
+    "detail": {
+        "name": "meta[property=\"og:novel:book_name\"]@attr->content",
+        "author": "meta[property=\"og:novel:author\"]@attr->content",
+        "cover": "",
+        "summary": "meta[property=\"og:description\"]@attr->content",
+        "status": "meta[property=\"og:novel:status\"]@attr->content",
+        "update": "meta[property=\"og:novel:update_time\"]@attr->content",
+        "lastChapter": "meta[property=\"og:novel:lastest_chapter_name\"]@attr->content",
+        "catalog": ".chapterlist a"
+    },
+    "catalog": {
+        "list": ".booklist li",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#chaptercontent"
+    }
+}

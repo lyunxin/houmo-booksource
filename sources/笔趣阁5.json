@@ -1,0 +1,34 @@
+{
+    "name": "笔趣阁5",
+    "url": "www.biquge5.com",
+    "version": 101,
+    "search": {
+        "url": "https://www.biquge5.com/search.php?q=${key}",
+        "charset": "utf-8",
+        "list": "div.col-md-6 dl",
+        "name": "h3 a",
+        "author": "",
+        "cover": "",
+        "summary": "",
+        "detail": "h3 a"
+    },
+    "detail": {
+        "name": "meta[property=\"og:novel:book_name\"]@attr->content",
+        "author": "meta[property=\"og:novel:author\"]@attr->content",
+        "cover": "meta[property=\"og:image\"]@attr->content",
+        "summary": "meta[property=\"og:description\"]@attr->content",
+        "status": "meta[property=\"og:novel:status\"]@attr->content",
+        "update": "meta[property=\"og:novel:update_time\"]@attr->content",
+        "lastChapter": "meta[property=\"og:novel:latest_chapter_name\"]@attr->content",
+        "catalog": ""
+    },
+    "catalog": {
+        "list": "div.book_list li",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "article, #content, .content",
+        "page": "a#next1[href$=\"_2.html\"], a#next1[href$=\"_3.html\"], a#next1[href$=\"_4.html\"]"
+    }
+}
